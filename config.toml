@@ -1,7 +1,7 @@
 logging-to-file = true        # enables logging of every patch process to a seperate file
 enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
 build-mindetach-module = true
-
+compression-level = 9         # compression level for module zips. between 1 and 9
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
 
@@ -15,15 +15,15 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 module-prop-name = "ytrv-magisk"
 
 [YouTube-Extended]
-app-name = "YouTube"
+app-name = "YouTube Premium"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
-build-mode = "both"
+build-mode = "apk"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 
 [Music]
-build-mode = "both"
+build-mode = "apk"
 excluded-patches = ""
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 arch = "both"
@@ -33,10 +33,49 @@ app-name = "Music"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
-build-mode = "both"
+build-mode = "apk"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 arch = "both"
 
+[YouTube-Android-6-7]
+app-name = "YouTube Premium"
+enabled = true
+build-mode = "apk"
+excluded-patches = ""
+included-patches = ""
+version = "17.34.36"
+exclusive-patches = false
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
+# extended
+patches-source = "kitadai31/revanced-patches"
+integrations-source = "kitadai31/revanced-integrations"
+rv-brand = "ReVanced Extended"
+[Music-arm64-Android-6-7]
+enabled = false
+build-mode = "both"
+app-name = "Music"
+excluded-patches = ""
+included-patches = ""
+version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
+arch = "arm64-v8a"
+# extended
+patches-source = "kitadai31/revanced-patches"
+integrations-source = "kitadai31/revanced-integrations"
+rv-brand = "ReVanced Extended"
+[Music-arm-Android-6-7]
+enabled = false
+build-mode = "apk"
+app-name = "Music"
+excluded-patches = ""
+included-patches = ""
+version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
+arch = "arm-v7a"
+# extended
+patches-source = "kitadai31/revanced-patches"
+integrations-source = "kitadai31/revanced-integrations"
+rv-brand = "ReVanced Extended"
 [Twitter]
 build-mode = "apk"
 excluded-patches = "hide-views-stats"
