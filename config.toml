@@ -14,13 +14,13 @@ version = "auto"                                                      # 'auto', 
 exclusive-patches = false                                             # excludes all patches by default and only applies included-patches
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 module-prop-name = "ytrv-magisk"
-
+enabled = false
 [YouTube-Extended]
 
 app-name = "YouTube Premium"
 version = "18.16.39"
 patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
+integrations-source = "TanNhatCMS/revanced-integrations"
 rv-brand = "ReVanced Extended"
 build-mode = "apk"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
@@ -42,7 +42,7 @@ arch = "both"
 enabled = false
 [YouTube-Android-6-7]
 app-name = "YouTube Premium"
-enabled = true
+enabled = false
 build-mode = "apk"
 excluded-patches = ""
 included-patches = ""
